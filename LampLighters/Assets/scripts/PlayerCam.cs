@@ -34,7 +34,7 @@ public class PlayerCam : MonoBehaviour
 
         xRotation -= mouseY;
 
-        //clamp x rotion to enusre roation cnat be more than 90º
+        //clamp x rotion to enusre roation cant be more than 90º
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         //rotate along x
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
