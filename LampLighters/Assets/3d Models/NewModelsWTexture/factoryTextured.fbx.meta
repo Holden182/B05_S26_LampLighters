@@ -3,7 +3,47 @@ guid: 14aac1c28444644e6891272d195319a9
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blackBrick.004
+    second: {fileID: 2100000, guid: 2c92042a4cc554670886c82d62e8ec19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: concrete
+    second: {fileID: 2100000, guid: bf3af2a1eaf4a4d48ae93420f21fdaad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark
+    second: {fileID: 2100000, guid: 4bcf2eadd170649e489429d6dd13ccc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door
+    second: {fileID: 2100000, guid: e0a92422f17dd409c8d6d13dfce4f4a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof
+    second: {fileID: 2100000, guid: a4f125883fd574fba973ea8e1f7bcd97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof blue
+    second: {fileID: 2100000, guid: 1aa39c4b97b774f5da7775209a144c7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: smallBricks
+    second: {fileID: 2100000, guid: 1bbc95ccba1e441d290dbec26621b29d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: swindow
+    second: {fileID: 2100000, guid: b51a94e2864004f1497094184881fca9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

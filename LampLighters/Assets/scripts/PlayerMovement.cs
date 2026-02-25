@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
         Vector3 target = moveDir.normalized * speed;
 
         // Read the current Rigidbody velocity (includes vertical velocity from gravity/jumps)
-        Vector3 vel = rb.velocity;
+        Vector3 vel = rb.linearVelocity;
 
         // Extract only the horizontal part of current velocity (ignore Y)
         Vector3 horiz = new Vector3(vel.x, 0f, vel.z);
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         Vector3 newHoriz = Vector3.Lerp(horiz, target, accel * Time.fixedDeltaTime);
 
         // Apply the new horizontal velocity, but preserve the current vertical velocity (vel.y)
-        rb.velocity = new Vector3(newHoriz.x, vel.y, newHoriz.z);
+        rb.linearVelocity = new Vector3(newHoriz.x, vel.y, newHoriz.z);
 
         // Jump is a one-time action; apply it in FixedUpdate (physics step)
         if (jumpPressed && readyToJump && grounded)
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             jumpPressed = false;
             readyToJump = false;
             Jump();
-            Debug.Log("JUMP! grounded=" + grounded + ", velY=" + rb.velocity.y);
+            Debug.Log("JUMP! grounded=" + grounded + ", velY=" + rb.linearVelocity.y);
             Invoke(nameof(ResetJump), jumpCooldown);
         }
         else
@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
         isDead = true;
 
         // stop physics
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic = true;
 
@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         // reset vertical velocity so every jump is the same height
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
         // apply an instantaneous upward impulse
         rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);

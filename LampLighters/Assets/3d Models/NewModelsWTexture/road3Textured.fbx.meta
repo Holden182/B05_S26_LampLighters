@@ -3,7 +3,17 @@ guid: a80ecf093c5d34f4a999cf381a47ce2e
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cobble.003
+    second: {fileID: 2100000, guid: f1af5258157bf4ff9aaece8715d4ca6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tiles.003
+    second: {fileID: 2100000, guid: f4a44b06db34f4cd9ae0ba0148909932, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
