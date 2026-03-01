@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAnimationDriver : MonoBehaviour
+public class PlayerAnimation : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody rb;
@@ -18,5 +18,10 @@ public class PlayerAnimationDriver : MonoBehaviour
 
         bool isWalking = speed > 0.1f;
         anim.SetBool("walk", isWalking);
+    }
+
+    public void LightLamp()
+    {
+        anim.SetTrigger("light");
     }
 }
