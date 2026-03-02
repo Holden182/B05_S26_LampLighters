@@ -4,8 +4,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine;
-
 
 // I use this to let the player interact with things they’re looking at.
 public class PlayerInteract : MonoBehaviour
@@ -18,6 +16,8 @@ public class PlayerInteract : MonoBehaviour
 
     // Only interact with certain layers (like Lamps)
     public LayerMask interactMask;
+
+    private PlayerAnimation anim; 
 
     void Start()
     {
@@ -43,6 +43,7 @@ public class PlayerInteract : MonoBehaviour
                 // If it is, toggle it
                 if (lamp != null)
                     lamp.Toggle();
+                    anim.LightLamp();
             }
         }
     }

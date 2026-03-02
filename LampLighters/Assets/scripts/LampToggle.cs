@@ -4,7 +4,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine;
 
 // put this on a lamp so it can turn it on/off.
 public class LampToggle : MonoBehaviour

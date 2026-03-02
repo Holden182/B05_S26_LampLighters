@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator ReturnToMenu()
     {
         yield return new WaitForSeconds(0.5f); // optional delay
-        SceneManager.LoadScene("MainMenu");    // make sure name matches build list
+        SceneManager.LoadScene("EndLose");    // make sure name matches build list
     }
 
     private void Jump()
