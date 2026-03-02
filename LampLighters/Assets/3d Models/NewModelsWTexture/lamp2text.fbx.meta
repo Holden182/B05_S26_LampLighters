@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e361cb2d8e43f4e52bb319db6105e3e0
+guid: 84e6a79a9683342bfac454489492ae59
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: roof
-    second: {fileID: 2100000, guid: 2f96352f828e441aa94b80f20d1b00dc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: smallBricks
-    second: {fileID: 2100000, guid: a506cd35d0f904f519f4e242cd19c40c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: swindow
-    second: {fileID: 2100000, guid: b146cd5fcc6eb46a8a497e5e30ee9008, type: 2}
+      name: Material
+    second: {fileID: 2100000, guid: 364796d75896f46d997fbb3c00ce6e3f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
