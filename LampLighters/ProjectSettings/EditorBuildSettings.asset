@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 857503a95fa1f43969b957ab07cb856e
+  - enabled: 1
+    path: Assets/Scenes/EndWin.unity
+    guid: 2df61d0d45c884676b14688b44293c78
+  - enabled: 1
+    path: Assets/Scenes/EndLose.unity
+    guid: d102e325e84044c569579119411229da
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
