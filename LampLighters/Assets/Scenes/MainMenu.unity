@@ -4453,12 +4453,13 @@ MonoBehaviour:
   m_text: 'You are a lamp lighter trying to light up the lamps. Try to survive until
     6:00 am without being caught by the ghost while lighting as many lamps as possible.
     If you light them all  then your shift ends early. The ghost is weary of the
-    light and will find itslef weakened by the amount of light in the town.
+    light and will find itself weakened by the amount of light in the town. Be careful
+    spend to long lighting lights and one may just flicker off!
 
 
-    Use
-    W and trackpad or mouse to navigate the map. To light a lamp, approach it and
-    hit E. To pause, press escape.'
+    Use W and trackpad
+    or mouse to navigate the map. To light a lamp, approach it and hit E. To pause,
+    press escape. Use esacape to pause. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4485,8 +4486,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
