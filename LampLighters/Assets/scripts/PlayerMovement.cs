@@ -155,11 +155,12 @@ public class PlayerController : MonoBehaviour
         {
             // Destroy the current object
             Debug.Log("Enemy detected!");
-            Die();
+            bool lost = true;
+            Die(lost);
             // Update the winText to display "You Lose!"
         }
     }
-    private void Die()
+   public void Die(bool lost)
     {
         isDead = true;
 
@@ -182,15 +183,21 @@ public class PlayerController : MonoBehaviour
 
         GetComponentInChildren<Renderer>().enabled = false;
 
-        StartCoroutine(ReturnToMenu());
+        StartCoroutine(ReturnToMenu(lost));
     }
 
-    private IEnumerator ReturnToMenu()
+    private IEnumerator ReturnToMenu(bool lost)
     {
         yield return new WaitForSeconds(0.5f); // optional delay
-        SceneManager.LoadScene("EndLose");    // make sure name matches build list
+        if(lost)
+        {
+            SceneManager.LoadScene("EndLose");    // make sure name matches build list
+        }
+        else
+        {
+            SceneManager.LoadScene("EndWin");
+        }
     }
-
     private void Jump()
     {
         // reset vertical velocity so every jump is the same height
