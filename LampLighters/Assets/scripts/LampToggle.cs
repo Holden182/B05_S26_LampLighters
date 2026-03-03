@@ -5,31 +5,42 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// put this on a lamp so it can turn it on/off.
+using UnityEngine;
+
 public class LampToggle : MonoBehaviour
 {
-    // The actual Light component needed to toggle
+   
     [SerializeField] private Light lampLight;
-
-    // Optional glow object (like emissive bulb mesh)
     [SerializeField] private GameObject glowObject;
+
+    // intialize all lamps off
+    [SerializeField] private bool startOn = false;
+    //set which lamps are on or off
+    public void SetStatePublic(bool on) => SetState(on);
+    
 
     void Awake()
     {
-        // If not assigned a light in the Inspector, try to find one
         if (lampLight == null)
             lampLight = GetComponentInChildren<Light>();
     }
 
-    // Called when the player interacts with the lamp
+    void Start()
+    {
+        SetState(startOn);
+    }
+
     public void Toggle()
     {
-        // Flip the light on/off
-        if (lampLight != null)
-            lampLight.enabled = !lampLight.enabled;
+        SetState(!(lampLight != null && lampLight.enabled));
+    }
 
-        // Match the glow to the light state
+    private void SetState(bool on)
+    {
+        if (lampLight != null)
+            lampLight.enabled = on;
+
         if (glowObject != null)
-            glowObject.SetActive(lampLight != null && lampLight.enabled);
+            glowObject.SetActive(on);
     }
 }
