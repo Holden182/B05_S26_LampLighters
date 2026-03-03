@@ -6,6 +6,8 @@ public class HeartbeatDetermine : MonoBehaviour
     public Transform Ghost;
     public GameObject HeartbeatEffect;
     public Animator heartbeatAnim;
+    public AudioSource SoftHB;
+    public AudioSource HardHB;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,18 +23,27 @@ public class HeartbeatDetermine : MonoBehaviour
 
         if (distance <= 8)
         {
+            HeartbeatEffect.SetActive(true);
+
+            SoftHB.Stop();
+            HardHB.Play();
 
             Debug.Log("Enemy is really close!");
-            HeartbeatEffect.SetActive(true);
         }
 
         else if (distance <= 12)
         {
-            Debug.Log("Enemy is close!");
             HeartbeatEffect.SetActive(true);
+            
+            HardHB.Stop();
+            SoftHB.Play();
+
+            Debug.Log("Enemy is close!");
         }
 
         else
             HeartbeatEffect.SetActive(false);
+            SoftHB.Stop();
+            HardHB.Stop();
     }
 }
