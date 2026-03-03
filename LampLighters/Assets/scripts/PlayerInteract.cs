@@ -11,7 +11,7 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
         if (cam == null) cam = Camera.main;
-        anim = GetComponentInChildren<PlayerAnimation>(); // or GetComponent<PlayerAnimation>()
+        anim = GetComponentInParent<PlayerAnimation>(); // or GetComponent<PlayerAnimation>()
     }
 
     void Update()
