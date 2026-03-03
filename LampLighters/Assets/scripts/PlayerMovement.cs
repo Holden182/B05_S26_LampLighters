@@ -100,6 +100,13 @@ public class PlayerController : MonoBehaviour
         // Ensure we don't accidentally add any vertical movement from orientation
         moveDir.y = 0f;
 
+        ///addded CODE REMOVE IF NESSAECARY
+        if (moveDir.sqrMagnitude > 0.001f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(moveDir, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 12f * Time.fixedDeltaTime);
+        }
+
         // Convert the direction into speed
         // normalized makes diagonal movement the same speed as straight movement
         Vector3 target = moveDir.normalized * speed;
