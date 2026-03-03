@@ -6316,6 +6316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 955997120592252095, guid: 4c7ae32a78a08480799c276021114e19, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2109104343966259614, guid: 4c7ae32a78a08480799c276021114e19, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -6368,6 +6372,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1843460687}
+    - target: {fileID: 5100268444503434348, guid: 4c7ae32a78a08480799c276021114e19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
